@@ -1,0 +1,5 @@
+- name: Practice Roles
+  hosts: vmdemo
+  become: yes
+  roles:
+    - rolespractice

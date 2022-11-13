@@ -1,0 +1,9 @@
+group1: { name: groupA, gid: 12111 }
+group2: { name: groupB, gid: 23222 }
+group3: { name: groupC, gid: 35333 }
+group4: { name: groupD, gid: 46444 }
+
+user1: { name: Albert, uid: 19111, groups: "groupC", password_lock: yes }
+user2: { name: Alfred, uid: 22022, groups: "groupB", password_lock: no }
+user3: { name: Anna, uid: 39333, groups: "groupA", password_lock: yes }
+user4: { name: Benedikt, uid: 42444, groups: "groupD", password_lock: no }

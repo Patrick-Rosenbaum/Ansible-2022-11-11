@@ -1,0 +1,30 @@
+- name: Manage User Groups
+  group:
+    name: "{{ item.name }}"
+    uid: "{{ item.gid }}"
+    groups: "{{ item.groups }}"
+    state: present
+  with_items:
+     - "{{groupA}}"
+     - "{{groupB}}"
+     - "{{groupC}}"
+     - "{{groupD}}"
+
+- name: Manage Users
+  user:
+    name: "{{ item.name }}"
+    uid: "{{ item.uid }}"
+    groups: "{{ item.groups }}"
+    state: present
+  with_items:
+     - "{{user1}}"
+     - "{{user2}}"
+     - "{{user3}}"
+     - "{{user4}}"
+
+- name: Print simple message
+  debug:
+    msg: Hello There!
+
+- name: Run Hello World Script
+  script: ./hello-world.sh
